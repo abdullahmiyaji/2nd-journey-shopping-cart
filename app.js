@@ -1,20 +1,31 @@
             //iphone plus button handler
         const iphonePlusBtn = document.querySelector("#iphonePlus");
             iphonePlusBtn.addEventListener("click",function(){
-            document.querySelector("#phoneAmount").value = 1+updateBtn("#phoneAmount")
-            document.querySelector("#phonePrice").innerHTML= 1219+updatePrice("#phonePrice")
-      })
+                document.querySelector("#phoneAmount").value = 1+updateBtn("#phoneAmount")
+                document.querySelector("#phonePrice").innerHTML= 1219+updatePrice("#phonePrice")
+        })
             //iphone minus button handler
         const iphoneMinusBtn = document.querySelector("#iphoneMinus");
             iphoneMinusBtn.addEventListener("click",function(){
+        const iMinusBtn = document.querySelector("#phoneAmount").value 
+            if(iMinusBtn <= 0){
+                alert("This number is not valid")
+            }else{
             document.querySelector("#phoneAmount").value = -1+updateBtn("#phoneAmount")
             document.querySelector("#phonePrice").innerHTML= -1219 + updatePrice("#phonePrice")
+            }
+            
         })
              //case Minus button handler
        const caseMinusBtn = document.querySelector("#caseMinusBtn");
              caseMinusBtn.addEventListener("click",function(){
+       const cMinusBtn=document.querySelector("#caseAmount").value 
+                if(cMinusBtn <= 0){
+                    alert("This number is not valid")
+                }else{
              document.querySelector("#caseAmount").value = -1+updateBtn("#caseAmount")
              document.querySelector("#casePrice").innerHTML= -59 + updatePrice("#casePrice")
+                }
         })
              //case plus button handler
         const casePlusBtn = document.querySelector("#casePlusBtn");
